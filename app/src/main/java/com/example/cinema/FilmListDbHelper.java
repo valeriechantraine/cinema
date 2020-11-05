@@ -7,7 +7,7 @@ import com.example.cinema.FilmListContract.*;
 public class FilmListDbHelper extends SQLiteOpenHelper {
 
     // The database name
-    private static final String DATABASE_NAME = "filmsList.db";
+    private static final String DATABASE_NAME = "filmList.db";
 
     // If you change the database schema, you must increment the database version
     private static final int DATABASE_VERSION = 1;
@@ -22,18 +22,17 @@ public class FilmListDbHelper extends SQLiteOpenHelper {
 
         // Create a table to hold filmList data
         final String SQL_CREATE_FILMLIST_TABLE = "CREATE TABLE " + FilmListEntry.TABLE_NAME + " (" +
-                FilmListEntry._ID + " INTEGER PRIMARY KEY AUTOINCREMENT," +
                 FilmListEntry.COLUMN_FILM_NAME + " TEXT NOT NULL, " +
                 FilmListEntry.COLUMN_CRITIQUE + " TEXT NOT NULL, " +
                 FilmListEntry.COLUMN_DATE + " TEXT NOT NULL, " +
                 FilmListEntry.COLUMN_HOUR + " TEXT NOT NULL, " +
-                FilmListEntry.COLUMN_NOTE_FILM + " FLOAT NOT NULL, " +
-                FilmListEntry.COLUMN_NOTE_MUSIC + " FLOAT NOT NULL, " +
-                FilmListEntry.COLUMN_NOTE_SCENARIO + " FLOAT NOT NULL, " +
-
+                FilmListEntry.COLUMN_NOTE_FILM + " DOUBLE NOT NULL, " +
+                FilmListEntry.COLUMN_NOTE_MUSIC + " DOUBLE NOT NULL, " +
+                FilmListEntry.COLUMN_NOTE_SCENARIO + " DOUBLE NOT NULL " +
                 "); ";
 
         sqLiteDatabase.execSQL(SQL_CREATE_FILMLIST_TABLE);
+
     }
 
     @Override

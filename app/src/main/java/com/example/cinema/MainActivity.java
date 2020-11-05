@@ -1,5 +1,6 @@
 package com.example.cinema;
 
+import android.content.ContentValues;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
@@ -81,6 +82,22 @@ public class MainActivity extends AppCompatActivity {
             return;
         }
         else {
+            // save data
+
+            ContentValues cv = new ContentValues();
+            cv.put(FilmListContract.FilmListEntry.COLUMN_FILM_NAME, mTitle.getText().toString());
+            cv.put(FilmListContract.FilmListEntry.COLUMN_CRITIQUE, mDescription.getText().toString());
+            cv.put(FilmListContract.FilmListEntry.COLUMN_DATE, mDate.getText().toString());
+            cv.put(FilmListContract.FilmListEntry.COLUMN_HOUR, mHour.getText().toString());
+            cv.put(FilmListContract.FilmListEntry.COLUMN_NOTE_FILM, mRate.getRating());
+            cv.put(FilmListContract.FilmListEntry.COLUMN_NOTE_MUSIC, mMusic.getRating());
+            cv.put(FilmListContract.FilmListEntry.COLUMN_NOTE_SCENARIO, mScenario.getRating());
+
+
+            long results = mDb.insert(FilmListContract.FilmListEntry.TABLE_NAME, null, cv);
+
+
+
             //clear UI text fields
             mTitle.getText().clear();
             mDate.getText().clear();

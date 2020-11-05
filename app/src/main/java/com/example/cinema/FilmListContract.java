@@ -10,9 +10,8 @@ public class FilmListContract {
         public static final String COLUMN_CRITIQUE = "filmCritique";
         public static final String COLUMN_DATE = "filmDate";
         public static final String COLUMN_HOUR = "filmHour";
-        public static final Double COLUMN_NOTE_FILM = 2.4;
-        public static final Double COLUMN_NOTE_MUSIC = 2.4;
-        public static final Double COLUMN_NOTE_SCENARIO = 2.4;
+        public static final String COLUMN_NOTE_FILM = "noteFilm";
+        public static final String COLUMN_NOTE_MUSIC = "noteMusic";
+        public static final String COLUMN_NOTE_SCENARIO = "noteScenario";
     }
-
 }
