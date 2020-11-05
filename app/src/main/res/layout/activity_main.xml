@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.cinema.MainActivity">
+
+    <ScrollView android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" android:padding="5dp">
+
+        <!-- Titre du film -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Titre du film" />
+
+        <AutoCompleteTextView
+            android:id="@+id/film_title_edit_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:hint=""
+            android:inputType="textPersonName|textCapWords"
+            android:textAppearance="@style/TextAppearance.AppCompat.Headline" />
+
+        <!-- Date du film -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Date du film" />
+
+        <!-- <DatePicker
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+        /> -->
+
+        <EditText
+            android:id="@+id/film_date_edit_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <!-- <TimePicker
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" /> -->
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Heure du film" />
+
+        <!-- Heure du film -->
+        <EditText
+            android:id="@+id/film_hour_edit_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:contentDescription="" />
+
+        <!-- Note du film -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Votre note pour le film ?" />
+
+        <RatingBar
+            android:id="@+id/film_rate"
+            android:numStars="5"
+            android:stepSize="1.0"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:contentDescription="test" />
+
+        <!-- Note de la musique -->
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Votre note pour la musique  ?" />
+
+        <RatingBar
+            android:id="@+id/music_rate"
+            android:numStars="5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:contentDescription="Note de la musiue " />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Votre note pour le scénario ?" />
+
+        <!-- Note pour le scénario -->
+        <RatingBar
+            android:id="@+id/scenario_rate"
+            android:numStars="5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:contentDescription="" />
+
+        <!-- Description du film -->
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Qu'avez vous aimé/pas aimé dans ce film ?" />
+
+        <EditText
+            android:id="@+id/film_description_edit_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAppearance="@style/TextAppearance.AppCompat.Headline" />
+
+
+        <Button
+            android:id="@+id/add_to_filmsList_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:layout_marginTop="8dp"
+            android:text="Ajouter le film à ma liste"
+            android:onClick="addToFilmList"
+            android:textAppearance="@style/TextAppearance.AppCompat.Widget.Button.Inverse" />
+
+    </LinearLayout>
+    </ScrollView>
+
+
+</LinearLayout>
